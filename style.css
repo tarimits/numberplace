@@ -66,8 +66,8 @@ tr:nth-child(3) td, tr:nth-child(6) td {
   }
 
   #solution table {
-    transform: scale(0.7);
+    transform: scale(0.5);
     transform-origin: top center;
-    opacity: 0.7;
+    opacity: 0.5;
   }
 }
