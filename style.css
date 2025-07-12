@@ -1,0 +1,73 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#sudoku-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  border: 2px solid #000
+}
+
+td {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size: 24px;
+}
+
+/* 3×3の太枠 */
+td:nth-child(3), td:nth-child(6) {
+  border-right: 2px solid #000;
+}
+
+tr:nth-child(3) td, tr:nth-child(6) td {
+  border-bottom: 2px solid #000;
+}
+
+/* 印刷用レイアウト */
+@media print {
+  #controls {
+    display: none;
+  }
+
+  body {
+    display: block;
+  }
+
+  #sudoku-container {
+    page-break-after: always;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #puzzle table {
+    transform: scale(1.0);
+    transform-origin: top center;
+    margin-bottom: 60px;
+  }
+
+  #solution table {
+    transform: scale(0.7);
+    transform-origin: top center;
+    opacity: 0.7;
+  }
+}

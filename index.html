@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>数独メーカー/number place maker自動生成</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>数独メーカー/number place maker</h1>
+
+  <div id="controls">
+    空欄数: <input type="number" id="emptyCount" value="10" min="10" max="50">
+    <button onclick="generateSudoku()">生成</button>
+    <button onclick="window.print()">印刷</button>
+  </div>
+
+  <div id="sudoku-container">
+    <div id="puzzle"></div>
+    <div id="solution"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
